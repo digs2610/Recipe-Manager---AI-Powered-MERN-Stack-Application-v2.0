@@ -1,0 +1,15 @@
+{
+  "name": "recipe-manager",
+  "version": "1.0.0",
+  "description": "Recipe Manager MERN Stack Application",
+  "scripts": {
+    "start": "node backend/server.js",
+    "server": "nodemon backend/server.js",
+    "client": "npm run dev --prefix frontend",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "build": "npm install && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1"
+  }
+}
