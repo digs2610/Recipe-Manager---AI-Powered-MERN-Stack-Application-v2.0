@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import api from '../utils/api';
 import { 
-  LayoutDashboard, Recipe, Heart, Eye, Star, TrendingUp, 
-  Plus, ChefHat, Calendar, Users, MessageCircle, Activity
+  LayoutDashboard, ChefHat, Heart, Eye, Star, TrendingUp, 
+  Plus, Calendar, Users, MessageCircle, Activity
 } from 'lucide-react';
 
 const StatCard = ({ icon: Icon, label, value, change, color }) => (
@@ -45,7 +45,7 @@ const Dashboard = () => {
   }
 
   const stats = [
-    { icon: Recipe, label: 'Total Recipes', value: data?.totalRecipes || 0, color: 'bg-gradient-to-br from-cyan-500 to-blue-500' },
+    { icon: ChefHat, label: 'Total Recipes', value: data?.totalRecipes || 0, color: 'bg-gradient-to-br from-cyan-500 to-blue-500' },
     { icon: Heart, label: 'Total Likes', value: data?.totalLikes || 0, color: 'bg-gradient-to-br from-pink-500 to-rose-500' },
     { icon: Eye, label: 'Total Views', value: data?.totalViews || 0, color: 'bg-gradient-to-br from-violet-500 to-purple-500' },
     { icon: MessageCircle, label: 'Reviews', value: data?.totalReviews || 0, color: 'bg-gradient-to-br from-amber-500 to-orange-500' },
